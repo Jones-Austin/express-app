@@ -37,6 +37,18 @@ app.get('/contact', (req, res) => {
     `);
 });
 
+// Form submission
+app.get('/submit-contact', (req, res) => {
+    const name = req.query.name;
+    const email = req.query.email;
+    const contact = req.query.contact;
+
+    // Construct the response message
+    const responseMessage = `Thank you, ${name}! We have received your message. Email: ${email}, Other Contact: ${contact}`;
+
+    res.send(responseMessage);
+});
+
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
