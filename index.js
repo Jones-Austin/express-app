@@ -10,6 +10,11 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
+// Hello, 2025! (New route)
+app.get('/hello', (req, res) => {
+    res.send('<h1>Hello, 2025!</h1>');
+  });
+
 // About page route
 app.get('/about', (req, res) => {
     res.send('This is a simple Express application for learning purposes.');

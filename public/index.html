@@ -62,5 +62,21 @@
     <footer>
         <p>&copy; 2025 Austin Jones. All rights reserved.</p>
     </footer>
+
+    <script>
+        const quotes = [
+          "The best way to predict the future is to invent it.",
+          "Life is about making an impact, not making an income.",
+          "Strive not to be a success, but rather to be of value.",
+          "I attribute my success to this: I never gave or took any excuse."
+        ];
+        
+        document.getElementById("quoteButton").addEventListener("click", function() {
+          const randomIndex = Math.floor(Math.random() * quotes.length);
+          document.getElementById("quoteDisplay").textContent = quotes[randomIndex];
+        });
+      </script>
+
+      
 </body>
 </html>
